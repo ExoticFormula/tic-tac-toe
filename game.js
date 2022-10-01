@@ -13,16 +13,26 @@ const checkForWin = () => {
   const cellSevenState = extractState(".cell-7", 7);
   const cellEightState = extractState(".cell-8", 8);
   const cellNineState = extractState(".cell-9", 9);
-  compareCells(cellOneState, cellTwoState, cellThreeState);
-  compareCells(cellFourState, cellFiveState, cellSixState);
-  compareCells(cellSevenState, cellEightState, cellNineState);
-  compareCells(cellOneState, cellFourState, cellSevenState);
-  compareCells(cellTwoState, cellFiveState, cellEightState);
-  compareCells(cellThreeState, cellSixState, cellNineState);
-  compareCells(cellOneState, cellFiveState, cellNineState);
-  compareCells(cellThreeState, cellFiveState, cellSevenState);
+  if (checkDraw() == true) {
+    document.querySelector(".game-title").innerText = "Draw";
+    return;
+  } else {
+    compareCells(cellOneState, cellTwoState, cellThreeState);
+    compareCells(cellFourState, cellFiveState, cellSixState);
+    compareCells(cellSevenState, cellEightState, cellNineState);
+    compareCells(cellOneState, cellFourState, cellSevenState);
+    compareCells(cellTwoState, cellFiveState, cellEightState);
+    compareCells(cellThreeState, cellSixState, cellNineState);
+    compareCells(cellOneState, cellFiveState, cellNineState);
+    compareCells(cellThreeState, cellFiveState, cellSevenState);
+  }
 };
 
+const checkDraw = () => {
+  return Array.from(document.querySelectorAll(".cell")).every((cell) => {
+    return cell.classList.contains("btn-X") || cell.classList.contains("btn-O");
+  });
+};
 const compareCells = (firstState, secondState, thirdState) => {
   if (
     firstState === secondState &&

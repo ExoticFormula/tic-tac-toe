@@ -45,7 +45,8 @@ body {
   align-items: center;
 }
 .game-title {
-  color: yellow;
+  color: #ffeb3b;
+  font-size: bold;
 }
 
 .btn-restart:hover {
