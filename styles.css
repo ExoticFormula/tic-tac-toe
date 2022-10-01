@@ -19,15 +19,20 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 .cell {
-  border: 1px solid white;
   height: 100px;
   width: 100px;
   border-radius: 5px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #2d2d2d;
 }
-.btn-X {
-  stroke: cyan;
+.btn-X-icon {
+  stroke:#fc4747;
+}
+
+.btn-O-icon{
+  fill: cyan;
 }
 .main-container {
   gap: 20px;
@@ -38,14 +43,6 @@ body {
 }
 .game-title {
   color: white;
-}
-
-.btn-X {
-  background-color: #fc4747;
-}
-
-.btn-O {
-  background-color: cyan;
 }
 
 .btn-restart:hover {
