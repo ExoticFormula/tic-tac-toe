@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #222;
+  background-color: #0f0617;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,14 +25,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2d2d2d;
+  background-color: #263238;
+}
+.cell:not(.cell.btn-X, .cell.btn-O):hover {
+  background-color: #1d2d2d;
 }
 .btn-X-icon {
-  stroke:#fc4747;
+  stroke: #fc4747;
 }
 
-.btn-O-icon{
-  fill: cyan;
+.btn-O-icon {
+  fill: dodgerblue;
 }
 .main-container {
   gap: 20px;
@@ -42,7 +45,7 @@ body {
   align-items: center;
 }
 .game-title {
-  color: white;
+  color: yellow;
 }
 
 .btn-restart:hover {
