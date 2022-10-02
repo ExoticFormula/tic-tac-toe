@@ -1,7 +1,7 @@
-let currentTurnBtnClassName = "btn-X";
 const resetGame = () => {
   window.location.reload();
 };
+let currentTurnBtnClassName = "btn-X";
 
 const checkForWin = () => {
   const cellOneState = extractState(".cell-1", 1);
@@ -62,7 +62,10 @@ const extractState = (cellClassName, index) => {
 
 const updateCellClassList = (e) => {
   if (
-    Array.from(e.target.classList).length < 3 &&
+    !(
+      e.target.classList.contains(".btn-X") ||
+      e.target.classList.contains(".btn-O")
+    ) &&
     e.target.nodeName === "DIV"
   ) {
     e.target.classList.add(currentTurnBtnClassName);
@@ -112,7 +115,7 @@ const updateCellClassList = (e) => {
   }
 };
 
-const ToggleCurrentTurnBtnClassName = () => {
+const toggleCurrentTurnBtnClassName = () => {
   currentTurnBtnClassName =
     currentTurnBtnClassName == "btn-X" ? "btn-O" : "btn-X";
 };
@@ -124,7 +127,7 @@ window.addEventListener("load", () => {
       if (document.querySelector(".game-title").innerText === "Tic Tac Toe") {
         updateCellClassList(e);
         checkForWin();
-        ToggleCurrentTurnBtnClassName();
+        toggleCurrentTurnBtnClassName();
       } else {
         shakeCell(e.target);
       }

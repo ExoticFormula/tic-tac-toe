@@ -13,9 +13,12 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
-
+.game-title {
+  color: #ffeb3b;
+  font-size: bold;
+  font-size: 2rem;
+}
 .game-container {
-  transition: all 0.2s linear;
   text-align: center;
   display: grid;
   width: 310px;
@@ -33,6 +36,9 @@ body {
   background-color: #263238;
 }
 @media only screen and (min-width: 800px) {
+  .game-title{
+    font-size: 2.4rem ;
+  }
   .game-container {
     text-align: center;
     display: grid;
@@ -70,11 +76,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.game-title {
-  color: #ffeb3b;
-  font-size: bold;
-  font-size: 2rem;
-}
+
 @media only screen and (max-width: 350px) {
   .main-container {
     transform: scale(0.85);
