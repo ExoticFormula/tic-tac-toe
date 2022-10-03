@@ -64,13 +64,7 @@ const extractState = (cellClassName, index) => {
 };
 
 const updateCellClassList = (e) => {
-  if (
-    !(
-      e.target.classList.contains(".btn-X") ||
-      e.target.classList.contains(".btn-O")
-    ) &&
-    e.target.nodeName === "DIV"
-  ) {
+
     e.target.classList.add(currentTurnBtnClassName);
     if (currentTurnBtnClassName == "btn-X") {
       e.target.innerHTML = `
@@ -131,10 +125,10 @@ if (
     !(
       e.target.classList.contains(".btn-X") ||
       e.target.classList.contains(".btn-O")
-    ) &&
+    ) &&(
     e.target.nodeName === "DIV"&&
 document.querySelector(".game-title").innerText === "Tic Tac Toe"
-  )
+  ))
       {
         updateCellClassList(e);
         checkForWin();
