@@ -49,7 +49,7 @@ const compareCells = (firstState, secondState, thirdState) => {
 const shakeCell = (cell) => {
 
 if (e.target.nodeName !== "DIV") 
-e = e.parentElement;
+e = e.target.parentElement;
   cell.classList.add("shaking");
 
   setTimeout(() => {
