@@ -71,8 +71,7 @@ const renderSvg = (target) => {
                 class="btn-X-icon"
                 x="0px"
                 y="0px"
-                width="90px"
-                height="90px"
+           
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 stroke-width="2"
@@ -89,10 +88,11 @@ const renderSvg = (target) => {
   } else {
     target.innerHTML = `
       <svg
+      class="btn-O-icon"
+
       x="0px"
       y="0px"
-      width="60px"
-      height="60px"
+ 
       x="0"
       y="0"
       class="btn-O-icon"

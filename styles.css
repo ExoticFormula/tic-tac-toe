@@ -35,7 +35,27 @@ body {
   justify-content: center;
   background-color: #263238;
 }
+.btn-X-icon {
+  stroke: #fc4747;
+  height: 65px;
+  width: 65px;
+}
+
+.btn-O-icon {
+  fill: dodgerblue;
+  height: 46px;
+  width: 46px;
+}
 @media only screen and (min-width: 800px) {
+  .btn-X-icon {
+    height: 90px;
+    width: 90px;
+  }
+
+  .btn-O-icon {
+    height: 60px;
+    width: 60px;
+  }
   .game-title {
     font-size: 2.4rem;
   }
@@ -62,13 +82,7 @@ body {
 .cell:not(.cell.btn-X, .cell.btn-O):hover {
   background-color: #1d2d2d;
 }
-.btn-X-icon {
-  stroke: #fc4747;
-}
 
-.btn-O-icon {
-  fill: dodgerblue;
-}
 .main-container {
   gap: 20px;
   display: flex;
