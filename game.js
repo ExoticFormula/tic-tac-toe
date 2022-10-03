@@ -124,7 +124,15 @@ window.addEventListener("load", () => {
   document.querySelector(".btn-restart").addEventListener("click", resetGame);
   document.querySelectorAll(".cell").forEach((cell) => {
     cell.addEventListener("click", (e) => {
-      if (document.querySelector(".game-title").innerText === "Tic Tac Toe") {
+if (
+    !(
+      e.target.classList.contains(".btn-X") ||
+      e.target.classList.contains(".btn-O")
+    ) &&
+    e.target.nodeName === "DIV"&&
+document.querySelector(".game-title").innerText === "Tic Tac Toe"
+  )
+      {
         updateCellClassList(e);
         checkForWin();
         toggleCurrentTurnBtnClassName();
