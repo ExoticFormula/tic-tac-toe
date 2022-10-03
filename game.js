@@ -47,6 +47,9 @@ const compareCells = (firstState, secondState, thirdState) => {
 };
 
 const shakeCell = (cell) => {
+
+if (e.target.nodeName !== "DIV") 
+e = e.parentElement;
   cell.classList.add("shaking");
 
   setTimeout(() => {
@@ -110,8 +113,8 @@ const updateCellClassList = (e) => {
        `;
     }
   } else {
-    if (e.target.nodeName === "DIV") shakeCell(e.target);
-    else shakeCell(e.target.parentElement);
+    shakeCell(e.target);
+    
   }
 };
 
